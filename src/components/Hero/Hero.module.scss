@@ -1,0 +1,109 @@
+.hero {
+  .backgroundContainer {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    .titleBox {
+      position: absolute;
+      width: 30%;
+      z-index: 3;
+      top: 45%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+      font-weight: 700;
+      color: rgb(39, 39, 39);
+      h1 {
+        animation: h1Fade 3s ease-out;
+      }
+      h3 {
+        animation: h3Fade 3s ease-out;
+        color: rgb(180, 180, 180);
+      }
+    }
+    .shape {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 160%;
+      background-color: rgb(255, 255, 255);
+      left: 40%;
+      top: -10%;
+      transform: rotate(20deg);
+      box-shadow: 0 0 7px rgb(48, 48, 48);
+      outline: 15px solid rgb(34, 34, 34);
+      outline-offset: -22px;
+      animation: heroShape 1.4s ease;
+    }
+    .background {
+      transform: scale(1.01);
+      height: 100vh;
+      background: black;
+      background-image: url("../../images/homebackground.jpg");
+      filter: grayscale(100%) blur(1.5px);
+    }
+  }
+}
+
+@keyframes h1Fade {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes h3Fade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    color: rgb(39, 39, 39);
+    opacity: 1;
+  }
+  100% {
+    color: rgb(180, 180, 180);
+  }
+}
+
+@keyframes heroShape {
+  0% {
+    left: 100%;
+    background-color: rgb(0, 217, 255);
+  }
+  70% {
+    background-color: white;
+  }
+
+  100% {
+    left: 40%;
+    background-color: white;
+  }
+}
+
+// .hero {
+//   .backgroundContainer {
+//     position: relative;
+//     overflow: hidden;
+//     .background {
+//       transform: scale(1.01);
+//       height: 100vh;
+//       background: black;
+//       background-image: linear-gradient(
+//           90deg,
+//           rgba(0, 0, 0, 0.3) 0%,
+//           rgba(255, 255, 255, 0.5) 20%,
+//           rgba(255, 255, 255, 0.8) 35%,
+//           white 55%
+//         ),
+//         url("../../images/homebackground.jpg");
+//       filter: grayscale(100%) blur(2px);
+//     }
+//   }
+// }
