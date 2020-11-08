@@ -30,15 +30,21 @@ module.exports = {
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
-    `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: "gatsby-plugin-sass",
+      options: {
+        data: `@import "./src/styles/config";`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `lato\:300,400,500,700`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          {
+            family: `Lato`,
+            variants: [`300`, `400`, `500`, `700`],
+          },
         ],
-        display: "swap",
       },
     },
   ],
