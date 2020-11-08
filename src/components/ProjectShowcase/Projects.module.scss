@@ -1,0 +1,273 @@
+.containerTop {
+  position: absolute;
+  height: 7em;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  .wedgeTop {
+    position: relative;
+    background-color: $primary;
+    height: 140%;
+    width: 160%;
+    left: -10%;
+    top: -85%;
+    transform: rotate(356deg);
+  }
+}
+
+.containerBot {
+  position: absolute;
+  height: 8em;
+  width: 100%;
+  overflow: hidden;
+  bottom: 0;
+  .wedgeBot {
+    position: relative;
+    background-color: $primary;
+    height: 140%;
+    width: 160%;
+    left: -10%;
+    bottom: -50%;
+    transform: rotate(356deg);
+  }
+}
+
+.titleBox {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  h1 {
+    position: absolute;
+    color: $textLight;
+    transform: rotate(90deg) translate(-50%, -50%);
+    right: -0.5em;
+    bottom: -6.5em;
+    font-size: 3em;
+  }
+}
+
+.left {
+  background-color: $bgWhite;
+}
+
+.right {
+  background-color: $bgWhite;
+}
+.projectBuffer {
+  padding-top: 125px;
+}
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 80%;
+  margin: 0.5em 0;
+  margin-left: 0.4em;
+  width: 80%;
+  min-width: 280px;
+  max-width: 650px;
+  .projectText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -30px;
+    padding: 0.5em 0;
+    .projectTitles {
+      text-align: center;
+      margin-bottom: 0.5em;
+      padding: 0.3em 0.1em;
+      h2 {
+        color: $text;
+        padding: 0.1em;
+      }
+      h3 {
+        padding: 0.1em;
+        font-weight: 300;
+      }
+      .mobileImage {
+        width: 96%;
+        margin: 1em 2% 0.5em 2%;
+        box-shadow: 0px 0px 4px $textLight;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .projectDescription {
+      color: $text;
+      padding: 0 1em 2em 1em;
+      text-align: center;
+      font-size: 0.7em;
+      font-weight: 300;
+      line-height: 1.5em;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      width: 85%;
+      min-width: 300px;
+    }
+  }
+  .projectImage {
+    display: none;
+    margin: 2em 1em 1em 1em;
+    width: 50%;
+    box-shadow: 0px 0px 4px $textLight;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .projectWrapper {
+    .projectText {
+      .buttons {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .titleBox {
+    display: flex;
+    font-size: 120%;
+    right: -2em;
+  }
+  .projectWrapper {
+    font-size: 100%;
+    width: 90%;
+    margin-right: 10%;
+    .projectText {
+      margin-top: 0;
+      .buttons {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .containerTop {
+    position: absolute;
+    height: 7em;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    .wedgeTop {
+      position: relative;
+      background-color: $primary;
+      height: 140%;
+      width: 160%;
+      left: -10%;
+      top: -85%;
+      transform: rotate(356deg);
+    }
+  }
+
+  .containerBot {
+    position: absolute;
+    height: 8em;
+    width: 100%;
+    overflow: hidden;
+    bottom: 0;
+    .wedgeBot {
+      position: relative;
+      background-color: $primary;
+      height: 140%;
+      width: 160%;
+      left: -10%;
+      bottom: -50%;
+      transform: rotate(356deg);
+    }
+  }
+
+  .titleBox {
+    h1 {
+      position: absolute;
+      color: $textLight;
+      transform: rotate(90deg) translate(-50%, -50%);
+      font-size: 4em;
+    }
+  }
+
+  .left {
+    background-color: $bgWhite;
+  }
+
+  .right {
+    background-color: $bgWhite;
+  }
+  .projectBuffer {
+    padding-top: 110px;
+  }
+
+  .projectWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 1em 0;
+    margin-right: 10%;
+    width: 80%;
+    max-width: 1920px;
+    .projectText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      padding: 1em 0;
+      .projectTitles {
+        text-align: center;
+        margin-bottom: 0.5em;
+        padding: 0.3em 0;
+        h2 {
+          color: $text;
+          padding: 0.1em;
+        }
+        h3 {
+          padding: 0.1em;
+          font-weight: 300;
+        }
+        .mobileImage {
+          display: none;
+        }
+      }
+      .projectDescription {
+        color: $text;
+        padding: 0 3em 2em 3em;
+        text-align: center;
+        font-size: 0.7em;
+        font-weight: 300;
+        line-height: 1.5em;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        max-width: 430px;
+      }
+    }
+    .projectImage {
+      display: flex;
+      margin: 2em 1em 1em 1em;
+      width: 50%;
+      box-shadow: 0px 0px 4px $textLight;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Hero/Hero"
-import Projects from "../components/Projects"
+import ProjectShowcase from "../components/ProjectShowcase/ProjectShowcase"
 import About from "../components/About"
 import Skills from "../components/Skills"
 import Contact from "../components/Contact"
@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <Projects />
+    <ProjectShowcase />
     <About />
     <Skills />
     <Contact />
