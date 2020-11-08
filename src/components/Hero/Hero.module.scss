@@ -8,16 +8,18 @@
       position: absolute;
       width: 30%;
       z-index: 3;
-      top: 45%;
-      left: 70%;
+      top: 40%;
+      left: 26%;
       transform: translate(-50%, -50%);
-      font-size: 1.5em;
+      font-size: 0.7em;
       font-weight: 700;
       color: $text;
       h1 {
         animation: h1Fade 3s ease-out;
       }
       h3 {
+        margin-left: 4em;
+        margin-bottom: 2em;
         animation: h3Fade 3s ease-out;
         color: $textLight;
       }
@@ -31,10 +33,10 @@
     .shape {
       position: absolute;
       z-index: 1;
-      width: 100%;
+      width: 200%;
       height: 160%;
       background-color: rgb(255, 255, 255);
-      left: 40%;
+      left: -20%;
       top: -10%;
       transform: rotate(20deg);
       box-shadow: 0 0 7px rgb(48, 48, 48);
@@ -56,7 +58,7 @@
       justify-content: space-between;
       position: absolute;
       transform: translate(-50%, -50%);
-      left: 87%;
+      left: 50%;
       top: 84%;
       z-index: 2;
       animation: fadeIn 2s;
@@ -66,7 +68,7 @@
     }
 
     .iconHeader {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: space-around;
       position: absolute;
@@ -143,7 +145,255 @@
   }
 
   100% {
-    left: 40%;
+    left: -20%;
     background-color: white;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 0.8em;
+        left: 28%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 0.9em;
+        left: 34%;
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 0.9em;
+        left: 62%;
+        h3 {
+          margin: 0;
+        }
+      }
+      .shape {
+        left: 20%;
+        top: -10%;
+      }
+      .iconHeader {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+  @keyframes heroShape {
+    0% {
+      left: 100%;
+      background-color: $accent;
+    }
+    70% {
+      background-color: white;
+    }
+
+    100% {
+      left: 20%;
+      background-color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 1em;
+        left: 70%;
+        h3 {
+          margin: 0;
+        }
+      }
+      .shape {
+        left: 40%;
+        width: 100%;
+      }
+      .iconHeader {
+        display: flex;
+        width: 50%;
+        height: auto;
+        padding: 0.1em;
+        padding-right: 50%;
+        a {
+          display: flex;
+        }
+      }
+      .iconBox {
+        left: 80%;
+        top: 84%;
+      }
+    }
+  }
+  @keyframes heroShape {
+    0% {
+      left: 100%;
+      background-color: $accent;
+    }
+    70% {
+      background-color: white;
+    }
+
+    100% {
+      left: 40%;
+      background-color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .hero {
+    .backgroundContainer {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      .titleBox {
+        cursor: default;
+        position: absolute;
+        width: 30%;
+        z-index: 3;
+        top: 45%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2em;
+        font-weight: 700;
+        color: $text;
+        h1 {
+          animation: h1Fade 3s ease-out;
+        }
+        h3 {
+          margin: 0;
+          animation: h3Fade 3s ease-out;
+          color: $textLight;
+        }
+        button {
+          margin-top: 1em;
+          position: relative;
+          left: 0;
+          animation: buttonScale 3s ease-out;
+        }
+      }
+      .shape {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 160%;
+        background-color: rgb(255, 255, 255);
+        left: 40%;
+        top: -10%;
+        transform: rotate(20deg);
+        box-shadow: 0 0 7px rgb(48, 48, 48);
+        outline: 15px solid rgb(34, 34, 34);
+        outline-offset: -22px;
+        animation: heroShape 1.4s ease;
+      }
+      .background {
+        transform: scale(1.01);
+        height: 100vh;
+        background: black;
+        background-image: url("../../images/homebackground.jpg");
+        filter: grayscale(100%) blur(1.5px);
+      }
+
+      .iconBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 87%;
+        top: 84%;
+        z-index: 2;
+        animation: fadeIn 2s;
+        a {
+          padding: 0 0.2em;
+        }
+      }
+
+      .iconHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        width: 40%;
+        z-index: 1;
+        background-color: $primary;
+        opacity: 0.9;
+        padding: 0.1em;
+        padding-right: 60%;
+      }
+    }
+  }
+  @keyframes heroShape {
+    0% {
+      left: 100%;
+      background-color: $accent;
+    }
+    70% {
+      background-color: white;
+    }
+
+    100% {
+      left: 40%;
+      background-color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .hero {
+    .backgroundContainer {
+      .titleBox {
+        font-size: 2em;
+      }
+      .iconHeader {
+        padding: 0.4em;
+        padding-right: 60%;
+      }
+      .iconBox {
+        top: 90%;
+        left: 90%;
+      }
+    }
   }
 }
