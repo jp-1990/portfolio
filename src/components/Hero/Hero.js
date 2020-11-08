@@ -33,7 +33,11 @@ const Hero = () => {
               verticalAlign: "middle",
             }}
           >
-            <a href="https://github.com/jp-1990" target="_blank">
+            <a
+              href="https://github.com/jp-1990"
+              target="_blank"
+              rel="noreferrer"
+            >
               <DiGithubBadge />
             </a>
           </IconContext.Provider>
@@ -47,6 +51,7 @@ const Hero = () => {
             <a
               href="https://www.linkedin.com/in/james-plummer-73267712b/"
               target="_blank"
+              rel="noreferrer"
             >
               <SiLinkedin />
             </a>
@@ -56,7 +61,11 @@ const Hero = () => {
           <IconContext.Provider
             value={{ size: "1.2em", color: "white", verticalAlign: "middle" }}
           >
-            <a href="https://www.javascript.com/" target="_blank">
+            <a
+              href="https://www.javascript.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiJavascript />
             </a>
           </IconContext.Provider>
@@ -66,38 +75,48 @@ const Hero = () => {
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
               target="_blank"
+              rel="noreferrer"
             >
               <DiHtml5 />
             </a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
               target="_blank"
+              rel="noreferrer"
             >
               <DiCss3 />
             </a>
-            <a href="https://sass-lang.com/" target="_blank">
+            <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
               <DiSass />
             </a>
-            <a href="https://git-scm.com/" target="_blank">
+            <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
               <DiGit />
             </a>
-            <a href="https://www.mongodb.com/" target="_blank">
+            <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
               <DiMongodb />
             </a>
-            <a href="https://nodejs.org/en/" target="_blank">
+            <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
               <DiNodejsSmall />
             </a>
-            <a href="https://reactjs.org/" target="_blank">
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
               <DiReact />
             </a>
           </IconContext.Provider>
           <IconContext.Provider
             value={{ size: "1.2em", color: "white", verticalAlign: "middle" }}
           >
-            <a href="https://www.gatsbyjs.com/" target="_blank">
+            <a
+              href="https://www.gatsbyjs.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiGatsby />
             </a>
-            <a href="https://firebase.google.com/" target="_blank">
+            <a
+              href="https://firebase.google.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiFirebase />
             </a>
           </IconContext.Provider>
