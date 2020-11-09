@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Section from "../Common/Section"
+import SectionTitle from "../Common/SectionTitle"
 import Project from "./Project"
 import style from "./Projects.module.scss"
 
@@ -59,12 +60,14 @@ const ProjectShowcase = () => {
       <div className={style.containerTop}>
         <div className={style.wedgeTop}></div>
       </div>
-      <div className={style.titleBox}>
-        <h1>PROJECTS</h1>
-      </div>
+      <SectionTitle
+        title="PROJECTS"
+        side="right"
+        color="rgb(180, 180, 180)"
+        hover=""
+      />
       <div className={style.projectBuffer}></div>
       {projectsJsx}
-
       {projectsJsx}
       <div className={style.projectBuffer}></div>
       <div className={style.containerBot}>

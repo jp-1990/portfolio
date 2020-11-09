@@ -32,10 +32,6 @@
   }
 }
 
-.titleBox {
-  display: none;
-}
-
 .left {
   background-color: $bgWhite;
 }
@@ -48,6 +44,7 @@
 }
 
 .projectWrapper {
+  cursor: default;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,22 +128,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .titleBox {
-    display: flex;
-    font-size: 120%;
-    position: relative;
-    width: 100%;
-    height: 10px;
-    z-index: 1;
-    h1 {
-      position: absolute;
-      color: $textLight;
-      transform: rotate(90deg) translate(-50%, -50%);
-      right: -1em;
-      bottom: -6.5em;
-      font-size: 3em;
-    }
-  }
   .projectWrapper {
     font-size: 100%;
     width: 90%;
@@ -162,15 +143,6 @@
 }
 
 @media only screen and (min-width: 1600px) {
-  .titleBox {
-    h1 {
-      position: absolute;
-      color: $textLight;
-      transform: rotate(90deg) translate(-50%, -50%);
-      font-size: 4em;
-    }
-  }
-
   .projectBuffer {
     padding-top: 110px;
   }
@@ -211,10 +183,6 @@
 
   .containerBot {
     height: 10em;
-  }
-
-  .titleBox {
-    font-size: 130%;
   }
 
   .projectBuffer {
