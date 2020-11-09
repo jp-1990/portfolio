@@ -1,0 +1,67 @@
+.titleBox {
+  display: none;
+  cursor: default;
+}
+
+@media only screen and (min-width: 1000px) {
+  .left {
+    span {
+      transform: rotate(270deg) translate(-20%, -170%);
+      left: 0;
+    }
+  }
+
+  .right {
+    span {
+      transform: rotate(90deg) translate(20%, -170%);
+      right: 0;
+    }
+  }
+  .titleBox {
+    display: flex;
+    font-size: 120%;
+    position: relative;
+    width: 100%;
+    height: 10px;
+    z-index: 1;
+    span {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $textLight;
+      top: 6em;
+      h1 {
+        font-size: 3em;
+        margin: 0;
+        transition: color 0.3s, transform 0.3s;
+        &:hover {
+          color: $secondary;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .titleBox {
+    span {
+      margin-top: 1em;
+      h1 {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .titleBox {
+    span {
+      margin-top: 3em;
+      h1 {
+        font-size: 5em;
+      }
+    }
+  }
+}
