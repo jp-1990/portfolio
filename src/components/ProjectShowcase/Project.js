@@ -13,6 +13,8 @@ const Project = ({ data, side }) => {
     firebase: <SiFirebase />,
   }
 
+  data.description = data.description.replace("</p>", "</p><br>")
+
   const left = (
     <div className={`${style.projectWrapper} ${style.left}`}>
       <div className={style.projectText}>
