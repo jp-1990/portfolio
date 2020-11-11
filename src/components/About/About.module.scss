@@ -3,18 +3,15 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  border-radius: 10px;
-  width: 60%;
-  min-height: 650px;
-  padding: 1em;
-  margin-left: 30%;
-  margin-right: 10%;
+  width: 70%;
+  min-width: 300px;
   cursor: default;
-
+  font-size: 70%;
+  margin-top: -3em;
   h2 {
     line-height: 1.3em;
     letter-spacing: 1.3px;
-
+    padding: 0 0.5em;
     &::after {
       display: block;
       content: " ";
@@ -35,5 +32,33 @@
     padding: 0 2em;
     margin-bottom: 1em;
     letter-spacing: 1.3px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    font-size: 80%;
+    min-height: 650px;
+    padding: 1em;
+    margin-left: 20%;
+    margin-right: 8%;
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    width: 60%;
+    margin-left: 27%;
+    margin-right: 10%;
+    font-size: 100%;
+    margin-top: 0;
+    max-width: none;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    font-size: 120%;
   }
 }
