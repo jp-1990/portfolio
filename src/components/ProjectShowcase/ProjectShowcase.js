@@ -64,7 +64,7 @@ const ProjectShowcase = () => {
         title="PROJECTS"
         side="right"
         color="rgb(180, 180, 180)"
-        hover=""
+        hover="secondary"
       />
       <div className={style.projectBuffer}></div>
       {projectsJsx}
