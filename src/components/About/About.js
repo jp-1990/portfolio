@@ -27,13 +27,12 @@ const About = () => {
       }
     }
   `)
-  console.log(queryData)
+
   const titleSentence = queryData.allContentfulAbout.edges[0].node.titleSentence
   const content =
     queryData.allContentfulAboutContentRichTextNode.edges[0].node
       .childContentfulRichText.html
 
-  console.log(titleSentence, content)
   return (
     <Section name="about" type="primary">
       <SectionTitle title="ABOUT" side="left" color="white" hover="tertiary" />
