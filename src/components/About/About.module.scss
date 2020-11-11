@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  width: 60%;
+  min-height: 650px;
+  padding: 1em;
+  margin-left: 30%;
+  margin-right: 10%;
+  cursor: default;
+
+  h2 {
+    line-height: 1.3em;
+    letter-spacing: 1.3px;
+
+    &::after {
+      display: block;
+      content: " ";
+      height: 5px;
+      border-radius: 3px;
+      text-align: center;
+      width: 50%;
+      margin-left: 1em;
+      margin-top: 0.8em;
+      margin-bottom: 0.8em;
+      background-color: $tertiary;
+    }
+  }
+  p {
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.2em;
+    padding: 0 2em;
+    margin-bottom: 1em;
+    letter-spacing: 1.3px;
+  }
+}
