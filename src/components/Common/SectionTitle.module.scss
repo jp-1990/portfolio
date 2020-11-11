@@ -3,6 +3,24 @@
   cursor: default;
 }
 
+.primary {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.secondary {
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.tertiary {
+  &:hover {
+    color: $tertiary;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .left {
     span {
@@ -36,7 +54,6 @@
         margin: 0;
         transition: color 0.3s, transform 0.3s;
         &:hover {
-          color: $secondary;
           transform: scale(1.05);
         }
       }
