@@ -15,6 +15,8 @@ const ProjectShowcase = () => {
             title
             subtitle
             hosting
+            link
+            github
             image {
               fluid {
                 src
@@ -43,6 +45,8 @@ const ProjectShowcase = () => {
       image: el.node.image.fluid.src,
       imageAlt: el.node.title,
       description: "",
+      github: el.node.github,
+      link: el.node.link,
     })
   })
   queryData.allContentfulProjectDescriptionRichTextNode.edges.forEach(

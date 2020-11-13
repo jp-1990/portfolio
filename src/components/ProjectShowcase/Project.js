@@ -7,6 +7,12 @@ import Button from "../Common/Button"
 import style from "./Projects.module.scss"
 
 const Project = ({ data, side }) => {
+  const openInNewTab = url => {
+    console.log("testing")
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer")
+    if (newWindow) newWindow.opener = null
+  }
+
   const icons = {
     github: <DiGithubBadge />,
     heroku: <DiHeroku />,
@@ -30,12 +36,14 @@ const Project = ({ data, side }) => {
           dangerouslySetInnerHTML={{ __html: data.description }}
         ></div>
         <div className={style.buttons}>
-          <Button title="View Code">
+          <Button title="View Code" action={() => openInNewTab(data.github)}>
             <IconContext.Provider value={{ size: "1.4em" }}>
               {icons.github}
             </IconContext.Provider>
           </Button>
-          <Button title="Visit Site">{icons[data.hosting]}</Button>
+          <Button title="Visit Site" action={() => openInNewTab(data.link)}>
+            {icons[data.hosting]}
+          </Button>
         </div>
       </div>
       <div className={style.projectImage}>
@@ -62,12 +70,14 @@ const Project = ({ data, side }) => {
           dangerouslySetInnerHTML={{ __html: data.description }}
         ></div>
         <div className={style.buttons}>
-          <Button title="View Code">
+          <Button title="View Code" action={() => openInNewTab(data.github)}>
             <IconContext.Provider value={{ size: "1.4em" }}>
               {icons.github}
             </IconContext.Provider>
           </Button>
-          <Button title="Visit Site">{icons[data.hosting]}</Button>
+          <Button title="Visit Site" action={() => openInNewTab(data.link)}>
+            {icons[data.hosting]}
+          </Button>
         </div>
       </div>
     </div>
