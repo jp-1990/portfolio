@@ -17,13 +17,20 @@ import { SiJavascript, SiLinkedin, SiGatsby, SiFirebase } from "react-icons/si"
 import style from "./Hero.module.scss"
 
 const Hero = () => {
+  const scrollHandler = () => {
+    window.scroll({
+      left: 0,
+      top: document.getElementById("projects").offsetTop - 0,
+      behavior: "smooth",
+    })
+  }
   return (
     <div className={style.hero}>
       <div className={style.backgroundContainer}>
         <div className={style.titleBox}>
           <h3>Hi, I'm James</h3>
           <h1>WEB DEVELOPER</h1>
-          <Button title="PROJECTS" />
+          <Button title="PROJECTS" action={scrollHandler} />
         </div>
         <div className={style.iconBox}>
           <IconContext.Provider
