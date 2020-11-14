@@ -73,10 +73,6 @@ const ProjectShowcase = () => {
       <div className={style.projectBuffer}></div>
       {projectsJsx}
       {projectsJsx}
-      <div className={style.projectBuffer}></div>
-      <div className={style.containerBot}>
-        <div className={style.wedgeBot}></div>
-      </div>
     </Section>
   )
 }

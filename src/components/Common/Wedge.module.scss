@@ -1,0 +1,16 @@
+.container {
+  position: absolute;
+  height: 4.5em;
+  width: 100%;
+  overflow: hidden;
+  top: -2.5em;
+
+  .wedge {
+    position: relative;
+    height: 140%;
+    width: 160%;
+    left: -10%;
+    top: 30%;
+    transform: rotate(356deg);
+  }
+}

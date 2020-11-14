@@ -5,7 +5,9 @@ const navItem = props => {
   const scrollHandler = scroll => {
     window.scroll({
       left: 0,
-      top: document.getElementById(scroll).offsetTop - 0,
+      top:
+        document.getElementById(scroll).offsetTop +
+        (props.scroll === "projects" ? 45 : 0),
       behavior: "smooth",
     })
     if (props.menuFunc) props.menuFunc("closed")

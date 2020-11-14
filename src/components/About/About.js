@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Section from "../Common/Section"
 import SectionTitle from "../Common/SectionTitle"
+import Wedge from "../Common/Wedge"
 
 import style from "./About.module.scss"
 
@@ -35,6 +36,7 @@ const About = () => {
 
   return (
     <Section name="about" type="primary">
+      <Wedge top="white" bottom="rgb(0, 123, 145)" />
       <SectionTitle title="ABOUT" side="left" color="white" hover="tertiary" />
       <div
         className={style.container}

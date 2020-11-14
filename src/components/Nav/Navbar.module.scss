@@ -279,7 +279,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 70%;
+    font-size: 60%;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.9);
     margin-left: 1em;
@@ -291,7 +291,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: 85%;
     max-width: 1300px;
 
     ul {
@@ -306,9 +306,24 @@
           background-color: $tertiary;
           color: rgb(0, 67, 78);
         }
-        a {
-          font-size: 1rem;
+        span {
+          font-size: 80%;
           font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .logo {
+    font-size: 80%;
+  }
+  .standardNav {
+    ul {
+      li {
+        span {
+          font-size: 100%;
         }
       }
     }

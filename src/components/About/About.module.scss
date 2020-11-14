@@ -7,7 +7,7 @@
   min-width: 300px;
   cursor: default;
   font-size: 70%;
-  margin-top: -3em;
+  margin: 1.5em 0;
   h2 {
     line-height: 1.3em;
     letter-spacing: 1.3px;
@@ -38,10 +38,10 @@
 @media only screen and (min-width: 1000px) {
   .container {
     font-size: 80%;
-    min-height: 650px;
     padding: 1em;
-    margin-left: 20%;
+    margin-left: 30%;
     margin-right: 8%;
+    margin-top: 1.5em;
     max-width: 1000px;
   }
 }
@@ -52,7 +52,7 @@
     margin-left: 27%;
     margin-right: 10%;
     font-size: 100%;
-    margin-top: 0;
+    margin-top: 2em;
     max-width: none;
   }
 }

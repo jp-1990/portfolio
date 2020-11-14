@@ -13,6 +13,7 @@ import {
   DiSass,
 } from "react-icons/di"
 import { SiJavascript, SiLinkedin, SiGatsby, SiFirebase } from "react-icons/si"
+import { BsChevronDoubleDown } from "react-icons/bs"
 
 import style from "./Hero.module.scss"
 
@@ -20,7 +21,7 @@ const Hero = () => {
   const scrollHandler = () => {
     window.scroll({
       left: 0,
-      top: document.getElementById("projects").offsetTop - 0,
+      top: document.getElementById("projects").offsetTop + 30,
       behavior: "smooth",
     })
   }
@@ -30,7 +31,9 @@ const Hero = () => {
         <div className={style.titleBox}>
           <h3>Hi, I'm James</h3>
           <h1>WEB DEVELOPER</h1>
-          <Button title="PROJECTS" action={scrollHandler} />
+          <Button title="PROJECTS" action={scrollHandler}>
+            <BsChevronDoubleDown />
+          </Button>
         </div>
         <div className={style.iconBox}>
           <IconContext.Provider
