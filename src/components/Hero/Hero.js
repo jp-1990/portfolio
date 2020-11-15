@@ -21,7 +21,7 @@ const Hero = () => {
   const scrollHandler = () => {
     window.scroll({
       left: 0,
-      top: document.getElementById("projects").offsetTop + 30,
+      top: document.getElementById("projects").offsetTop,
       behavior: "smooth",
     })
   }

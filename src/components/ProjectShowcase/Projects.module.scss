@@ -1,20 +1,3 @@
-.containerTop {
-  position: absolute;
-  height: 7em;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  .wedgeTop {
-    position: relative;
-    background-color: $primary;
-    height: 140%;
-    width: 160%;
-    left: -10%;
-    top: -85%;
-    transform: rotate(356deg);
-  }
-}
-
 .left {
   background-color: $bgWhite;
 }
@@ -34,7 +17,7 @@
   align-items: center;
   border-radius: 3px;
   font-size: 80%;
-  margin: 0.5em 0;
+  margin: 1em 0;
   width: 80%;
   min-width: 280px;
   max-width: 650px;

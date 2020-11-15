@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Section from "../Common/Section"
 import SectionTitle from "../Common/SectionTitle"
+import Wedge from "../Common/Wedge"
 import Project from "./Project"
-import style from "./Projects.module.scss"
 
 const ProjectShowcase = () => {
   const queryData = useStaticQuery(graphql`
@@ -61,16 +61,14 @@ const ProjectShowcase = () => {
 
   return (
     <Section name="projects">
-      <div className={style.containerTop}>
-        <div className={style.wedgeTop}></div>
-      </div>
+      <Wedge bottom="white" top="rgb(0, 123, 145)" />
       <SectionTitle
         title="PROJECTS"
         side="right"
         color="rgb(180, 180, 180)"
         hover="secondary"
       />
-      <div className={style.projectBuffer}></div>
+
       {projectsJsx}
       {projectsJsx}
     </Section>

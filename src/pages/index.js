@@ -14,6 +14,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Navbar />
     <Hero />
+    <div style={{ backgroundColor: "rgb(0, 123, 145)", height: "150px" }}></div>
     <ProjectShowcase />
     <About />
     <Skills />
