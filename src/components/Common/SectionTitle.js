@@ -20,7 +20,7 @@ const SectionTitle = ({ title, side, color, hover }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [sectionY])
+  }, [sectionY, title])
 
   // select style based on window location relative to section
   if (sectionY >= 0) {
