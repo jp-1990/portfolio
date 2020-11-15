@@ -25,13 +25,15 @@
 @media only screen and (min-width: 1000px) {
   .left {
     transform: rotate(270deg) translate(4.5em, 3.6em);
+    top: 5.5em;
     left: 0;
     justify-content: flex-end;
   }
 
   .right {
-    transform: rotate(90deg) translate(-4.5em, 3.6em);
+    transform: rotate(90deg) translate(-6em, 3.6em);
     justify-content: flex-start;
+    top: 6em;
     right: 0;
   }
 
@@ -47,9 +49,7 @@
       display: flex;
       align-items: center;
       color: $textLight;
-      top: 6em;
       width: 0;
-
       h1 {
         font-size: 3.5em;
         margin: 0;

@@ -1,7 +1,74 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+
 import style from "./SectionTitle.module.scss"
 
 const SectionTitle = ({ title, side, color, hover }) => {
+  const [sectionY, setSectionY] = useState(0)
+  let position
+
+  // detect position of parent section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setSectionY(
+        Math.round(
+          document.getElementById(title.toLowerCase()).getBoundingClientRect().y
+        ),
+        title
+      )
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [sectionY])
+
+  // select style based on window location relative to section
+  if (sectionY >= 0) {
+    position = "top"
+  } else if (
+    sectionY >=
+    window.innerHeight -
+      document.getElementById(title.toLowerCase()).getBoundingClientRect()
+        .height +
+      122
+  ) {
+    position = "fixed"
+  } else if (
+    sectionY <
+    window.innerHeight -
+      document.getElementById(title.toLowerCase()).getBoundingClientRect()
+        .height +
+      122
+  ) {
+    position = "bottom"
+  }
+  console.log(sectionY, title, position)
+
+  // styles
+  const positionStyles = {
+    top: {
+      position: "absolute",
+      top: "6em",
+      color: color,
+    },
+    fixed: {
+      position: "fixed",
+      top: "7.3em",
+      color: color,
+    },
+    bottom: {
+      position: "absolute",
+      top: `${
+        document?.getElementById(title.toLowerCase())?.getBoundingClientRect()
+          .height -
+        window.innerHeight +
+        100
+      }px`,
+      color: color,
+    },
+  }
+
+  // generate title as inidivudal h1 elements
   let output
   if (title) {
     output = title.split("").map((el, i) => {
@@ -14,8 +81,14 @@ const SectionTitle = ({ title, side, color, hover }) => {
   }
 
   return (
-    <div id={title} className={style.titleBox}>
-      <span className={style[side]} style={{ color: `${color}` }}>
+    <div className={style.titleBox}>
+      <span
+        id={title.toUpperCase()}
+        className={style[side]}
+        style={
+          title === "PROJECTS" ? positionStyles[position] : { color: color }
+        }
+      >
         {output}
       </span>
     </div>
