@@ -2,15 +2,11 @@ import React from "react"
 
 import style from "./Contact.module.scss"
 
-const IconCard = ({ children, content }) => {
+const IconCard = ({ children, content, link }) => {
   let output
-  if (content.includes("github")) {
+  if (link) {
     output = (
-      <a
-        href="https://github.com/jp-1990"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={link} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     )

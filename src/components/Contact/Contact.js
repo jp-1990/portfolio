@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Section from "../Common/Section"
 import SectionTitle from "../Common/SectionTitle"
@@ -12,6 +13,27 @@ import { DiGithubBadge } from "react-icons/di"
 import style from "./Contact.module.scss"
 
 const Contact = () => {
+  const queryData = useStaticQuery(graphql`
+    query {
+      allContentfulContact {
+        edges {
+          node {
+            email
+            github
+            githubLink
+            number
+          }
+        }
+      }
+    }
+  `)
+  const data = {
+    email: queryData.allContentfulContact.edges[0].node.email,
+    number: queryData.allContentfulContact.edges[0].node.number,
+    github: queryData.allContentfulContact.edges[0].node.github,
+    githubLink: queryData.allContentfulContact.edges[0].node.githubLink,
+  }
+
   return (
     <Section name="contact" type="secondary">
       <Wedge top="white" bottom="rgb(0, 172, 202)" />
@@ -24,21 +46,21 @@ const Contact = () => {
 
       <div className={style.container}>
         <div className={style.cardbox}>
-          <IconCard content="07393293927">
+          <IconCard content={data.number}>
             <IconContext.Provider
               value={{ size: "3.5em", color: "white", verticalAlign: "middle" }}
             >
               <MdPhone />
             </IconContext.Provider>
           </IconCard>
-          <IconCard content="plum_1990@hotmail.co.uk">
+          <IconCard content={data.email}>
             <IconContext.Provider
               value={{ size: "3.5em", color: "white", verticalAlign: "middle" }}
             >
               <MdEmail />
             </IconContext.Provider>
           </IconCard>
-          <IconCard content="github.com/jp-1990">
+          <IconCard content={data.github} link={data.githubLink}>
             <IconContext.Provider
               value={{
                 size: "4em",
