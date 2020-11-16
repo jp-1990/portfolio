@@ -1,0 +1,322 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 70%;
+  justify-content: space-between;
+  width: 80%;
+  min-width: 300px;
+  margin-top: 1.5em;
+  padding: 0;
+  .cardbox {
+    display: flex;
+    flex-direction: column;
+    font-size: 50%;
+    padding-bottom: 20px;
+    .iconCard {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary;
+      border-radius: 3px;
+      width: 6.5em;
+      height: 6.5em;
+      margin: 0.2em;
+      cursor: pointer;
+      &:hover .content .open {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.5s, border 0.2s;
+        border-right: 0.5em solid $primary;
+        span {
+          opacity: 1;
+          transition: opacity 0.8s;
+        }
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        right: 0.6em;
+        transform: translateY(-50%);
+        height: 3em;
+        width: 0.5em;
+        background-color: $accent;
+        color: $accent;
+
+        .open {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          position: absolute;
+          left: 0;
+          width: auto;
+          height: 3em;
+          transform: scaleX(0);
+          transform-origin: left;
+          background-color: $accent;
+          color: white;
+          border-radius: 3px;
+          overflow: hidden;
+          border-right: 4px solid $accent;
+          transition: transform 0.3s ease-out, border 0.2s;
+          span {
+            font-size: 1.5em;
+            margin: 0 0.6em;
+            opacity: 0;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+            a {
+              color: inherit;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .formCard {
+    display: flex;
+    background-color: $secondary;
+    width: 100%;
+    height: 320px;
+    font-size: 70%;
+    perspective: 1000px;
+    .inner.flipped {
+      transform: translateZ(-100px) rotateY(180deg);
+    }
+    .inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 1.5s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: translateZ(-100px);
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 3px;
+      }
+      .front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: rotateY(0deg) translateZ(20px);
+        background-color: $primary;
+        box-shadow: 0 0 5px $accent;
+        h1 {
+          color: white;
+          font-weight: 400;
+          &::after {
+            content: " ";
+            display: block;
+            height: 4px;
+            width: 120%;
+            text-align: center;
+            margin: 0.5em -10%;
+            background-color: $tertiary;
+          }
+        }
+        span {
+          font-size: 2em;
+          font-weight: 700;
+          color: $secondary;
+          margin-top: 1em;
+        }
+      }
+
+      .left {
+        transform: rotateY(-90deg) translateZ(20px);
+        width: 40px;
+        background-color: $tertiary;
+      }
+      .back {
+        transform: rotateY(180deg) translateZ(20px);
+        background-color: $primary;
+        box-shadow: 0 0 5px $accent;
+        .formWrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        form {
+          width: 70%;
+          padding: 0 1em;
+          min-width: 250px;
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+
+          cursor: default;
+          font-size: 1em;
+          label {
+            margin: 0.5em;
+            color: $tertiary;
+          }
+          input {
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            font-size: 0.5em;
+            &:focus {
+              outline: none;
+            }
+            &[type="text"] {
+              width: 70%;
+            }
+          }
+          input[type="submit"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 300;
+            font-family: "Lato", sans-serif;
+            margin: 0.2em 0;
+            padding: 0 0.4em;
+            border: none;
+            width: 30%;
+            height: 1.5em;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px $text;
+            background-color: $tertiary;
+            color: $primary;
+            transition: 0.3s;
+            &:hover {
+              cursor: pointer;
+              background-color: rgb(252, 174, 73);
+              box-shadow: 2px 2px 4px $text;
+            }
+            &:focus {
+              border: none;
+              outline: $accent;
+            }
+          }
+
+          textarea {
+            font-size: 0.8em;
+            height: 30%;
+            min-height: 80px;
+            border-radius: 3px;
+            border: none;
+            margin-bottom: 1.5em;
+            resize: vertical;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    .cardbox {
+      font-size: 60%;
+    }
+    .formCard {
+      font-size: 80%;
+      height: 350px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    .cardbox {
+      font-size: 75%;
+    }
+    .formCard {
+      font-size: 90%;
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    .cardbox {
+      font-size: 100%;
+    }
+    .formCard {
+      font-size: 100%;
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    font-size: 60%;
+    width: 60%;
+    margin-left: 30%;
+    .formCard {
+      height: 400px;
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .container {
+    font-size: 70%;
+    width: 60%;
+    margin-left: 30%;
+    .cardbox {
+      font-size: 80%;
+    }
+    .formCard {
+      height: 450px;
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    flex-direction: row;
+    font-size: 100%;
+    width: 80%;
+    margin-left: 12%;
+    padding: 2.5em 0;
+    .cardbox {
+      font-size: 85%;
+      padding-bottom: 0;
+    }
+    .formCard {
+      font-size: 100%;
+      width: 45%;
+      height: auto;
+    }
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .container {
+    margin-top: 1.5em;
+    padding: 3em 0;
+    .cardbox {
+      font-size: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    margin-top: 2.5em;
+    font-size: 130%;
+    .cardbox {
+      font-size: 100%;
+    }
+  }
+}
