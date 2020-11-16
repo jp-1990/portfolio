@@ -5,27 +5,31 @@ import { debounce } from "lodash"
 import style from "./Contact.module.scss"
 
 const FormCard = () => {
-  const sendEmail = e => {
-    e.preventDefault()
+  const sendEmail = debounce(
+    e => {
+      e.preventDefault()
 
-    emailjs
-      .sendForm(
-        "portfolio_contact_form",
-        "portfolio_contact_form",
-        e.target,
-        "user_Zja9UaqaNb26pNRFvD4Wo"
-      )
-      .then(
-        result => {
-          console.log(result.text)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
+      emailjs
+        .sendForm(
+          "portfolio_contact_form",
+          "portfolio_contact_form",
+          e.target,
+          "user_Zja9UaqaNb26pNRFvD4Wo"
+        )
+        .then(
+          result => {
+            console.log(result.text)
+          },
+          error => {
+            console.log(error.text)
+          }
+        )
 
-    e.target.reset()
-  }
+      e.target.reset()
+    },
+    500,
+    { trailing: true }
+  )
 
   const flipHandler = e => {
     console.log(e.target)
