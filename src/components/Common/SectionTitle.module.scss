@@ -66,7 +66,17 @@
   .titleBox {
     span {
       h1 {
-        font-size: 4em;
+        font-size: 350%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .titleBox {
+    span {
+      h1 {
+        font-size: 400%;
       }
     }
   }
