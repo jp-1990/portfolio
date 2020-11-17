@@ -126,23 +126,25 @@ table {
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black;
+  background: $tertiary;
+  border: 1px solid rgb(223, 126, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #555;
+  background: rgb(0, 81, 94);
+  border: 2px solid rgb(0, 96, 110);
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(0, 96, 110);
 }
 
 html {
