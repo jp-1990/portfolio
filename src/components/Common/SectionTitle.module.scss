@@ -7,18 +7,21 @@
 .primary {
   &:hover {
     color: $primary;
+    transition: color 1.2s;
   }
 }
 
 .secondary {
   &:hover {
     color: $secondary;
+    transition: color 1.2s;
   }
 }
 
 .tertiary {
   &:hover {
     color: $tertiary;
+    transition: color 1.2s;
   }
 }
 
@@ -53,9 +56,10 @@
       h1 {
         font-size: 3.5em;
         margin: 0;
-        transition: color 0.3s, transform 0.3s;
+        transition: color 1.2s, transform 1.2s;
         &:hover {
           transform: scale(1.05);
+          transition: color 0.3s, transform 0.3s;
         }
       }
     }

@@ -42,7 +42,6 @@ const SectionTitle = ({ title, side, color, hover }) => {
   ) {
     position = "bottom"
   }
-  console.log(sectionY, title, position)
 
   // styles
   const positionStyles = {

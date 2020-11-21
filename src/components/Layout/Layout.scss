@@ -131,20 +131,20 @@ table {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $tertiary;
-  border: 1px solid rgb(223, 126, 0);
+  background: $text;
+  border: 1px solid rgba(41, 41, 41, 0.712);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 81, 94);
-  border: 2px solid rgb(0, 96, 110);
+  background: rgba(223, 126, 0, 1);
+  border: 1px solid rgba(124, 124, 124, 0.397);
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 96, 110);
+  background: rgba(0, 95, 110, 0.842);
 }
 
 html {
