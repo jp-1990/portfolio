@@ -1,0 +1,160 @@
+.outer {
+  font-size: 130px;
+  width: 2em;
+  height: 2em;
+  perspective-origin: 50% 0%;
+  perspective: 500px;
+
+  .inner {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    transform-style: preserve-3d;
+
+    div {
+      position: absolute;
+    }
+
+    .front,
+    .back {
+      transform-style: preserve-3d;
+      div {
+        width: 1.62em;
+        height: 1.54em;
+        opacity: 0.95;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          text-align: center;
+          position: absolute;
+          content: "";
+          top: 0;
+          width: 0;
+          height: 0;
+          border-width: 0.1em 0.71em 0.59em;
+          border-style: solid;
+          border-color: transparent transparent $primary;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0.69em;
+          left: 0.1em;
+          width: 0.9em;
+          height: 0;
+          z-index: -1;
+          background: none;
+          border-width: 0.75em 0.26em 0.1em;
+          border-style: solid;
+          border-color: $primary transparent transparent;
+        }
+      }
+      .face1 {
+        i {
+          position: absolute;
+          transform: scaleX(-1);
+          top: 0.8em;
+          font-size: 0.7em;
+          color: white;
+          opacity: 0.9;
+        }
+      }
+      .face2 {
+        transform-origin: 0.81em 0.85em 0;
+        transform: rotateZ(0) rotateX(-116.56deg) translateY(-0.69em)
+          translateY(-0.31em) translateZ(0.62em);
+        &::before {
+          border-color: transparent transparent rgb(0, 104, 122);
+        }
+        &::after {
+          border-color: rgb(0, 104, 122) transparent transparent;
+        }
+      }
+      .face3 {
+        transform-origin: 0.81em 0.85em 0;
+        transform: rotateZ(72deg) rotateX(-116.56deg) translateY(-0.69em)
+          translateY(-0.31em) translateZ(0.62em);
+        &::before {
+          border-color: transparent transparent rgb(14, 131, 151);
+        }
+        &::after {
+          border-color: rgb(14, 131, 151) transparent transparent;
+        }
+      }
+      .face4 {
+        transform-origin: 0.81em 0.85em 0;
+        transform: rotateZ(144deg) rotateX(-116.56deg) translateY(-0.69em)
+          translateY(-0.31em) translateZ(0.62em);
+        &::before {
+          border-color: transparent transparent rgb(16, 101, 116);
+        }
+        &::after {
+          border-color: rgb(16, 101, 116) transparent transparent;
+        }
+      }
+      .face5 {
+        transform-origin: 0.81em 0.85em 0;
+        transform: rotateZ(-144deg) rotateX(-116.56deg) translateY(-0.69em)
+          translateY(-0.31em) translateZ(0.62em);
+        &::before {
+          border-color: transparent transparent rgb(19, 126, 143);
+        }
+        &::after {
+          border-color: rgb(19, 126, 143) transparent transparent;
+        }
+      }
+      .face6 {
+        transform-origin: 0.81em 0.85em 0;
+        transform: rotateZ(-72deg) rotateX(-116.56deg) translateY(-0.69em)
+          translateY(-0.31em) translateZ(0.62em);
+        &::before {
+          border-color: transparent transparent rgb(0, 78, 90);
+        }
+        &::after {
+          border-color: rgb(0, 78, 90) transparent transparent;
+        }
+      }
+    }
+  }
+  .front {
+    transform-origin: 0.81em 0.85em 0;
+    transform: rotateX(90deg) translateZ(-2.23em);
+    i {
+      position: absolute;
+      transform: scaleX(1);
+      top: 0.8em;
+      font-size: 0.7em;
+      color: white;
+      opacity: 0.9;
+    }
+  }
+  .back {
+    transform-origin: 0.81em 0.85em 0;
+    transform: rotateX(-90deg);
+    i {
+      position: absolute;
+      transform: scaleX(1);
+      top: 0.8em;
+      font-size: 0.7em;
+      color: white;
+      opacity: 0.9;
+    }
+  }
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: 0.81em 1.7em 0;
+    animation: s 20s linear infinite;
+  }
+  @keyframes s {
+    0% {
+      -webkit-transform: rotateY(0) rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-359.9deg) rotateX(359.9deg);
+    }
+  }
+}
