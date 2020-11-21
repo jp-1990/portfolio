@@ -1,0 +1,92 @@
+.hexagon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 1.7321em;
+  background-color: $accent;
+  margin: 0.866em 0.1em;
+  cursor: pointer;
+  transition: 1.2s background-color;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 1.5em solid transparent;
+    border-right: 1.5em solid transparent;
+  }
+
+  &:before {
+    bottom: 99%;
+    border-bottom: 0.866em solid $secondary;
+    transition: 1.2s border;
+  }
+
+  &:after {
+    top: 99%;
+    width: 0;
+    border-top: 0.866em solid $secondary;
+    transition: 1.2s border;
+  }
+
+  &:hover {
+    background-color: $tertiary;
+    transition: 0.2s background-color;
+    &:before {
+      border-bottom: 0.866em solid $tertiary;
+      transition: 0.2s border;
+    }
+    &:after {
+      border-top: 0.866em solid $tertiary;
+      transition: 0.2s border;
+    }
+  }
+
+  .inner {
+    position: absolute;
+    font-size: 0.94em;
+    width: 3em;
+    height: 1.7321em;
+    background-color: white;
+    margin: 0.866em 0;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 1.5em solid transparent;
+      border-right: 1.5em solid transparent;
+    }
+
+    &:before {
+      bottom: 95%;
+      border-bottom: 0.866em solid white;
+    }
+
+    &:after {
+      top: 95%;
+      width: 0;
+      border-top: 0.866em solid white;
+      z-index: 100;
+    }
+    .content {
+      position: relative;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-0.1em);
+      z-index: 200;
+      color: rgb(0, 62, 73);
+      .title {
+        position: relative;
+        font-size: 0.4em;
+        margin-top: 0.4em;
+        color: $text;
+      }
+    }
+  }
+}
