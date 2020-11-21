@@ -1,5 +1,5 @@
 .outer {
-  font-size: 130px;
+  font-size: 80px;
   width: 2em;
   height: 2em;
   perspective-origin: 50% 0%;
@@ -156,5 +156,22 @@
     100% {
       -webkit-transform: rotateY(-359.9deg) rotateX(359.9deg);
     }
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .outer {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .outer {
+    font-size: 110px;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .outer {
+    font-size: 130px;
   }
 }

@@ -89,14 +89,14 @@ const Skills = () => {
   return (
     <Section name="skills">
       <Wedge bottom="white" top="rgb(0, 123, 145)" />
-      <div style={{ height: "40px" }}></div>
+      <div className={style.topPad}></div>
       <SectionTitle
         title="SKILLS"
         side="right"
         color=" rgb(180, 180, 180)"
         hover="secondary"
       />
-      <div style={{ height: "850px" }} className={style.container}>
+      <div className={style.container}>
         <div
           className={style.content}
           dangerouslySetInnerHTML={{
