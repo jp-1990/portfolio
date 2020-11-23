@@ -2,7 +2,7 @@
 
 A server-side rendered static site, linked to a Contentful CMS via GraphQL, built using Gatsby.
 
-![Showcase gif](../src/images/portfolio_showcase.gif)
+![Showcase gif](./src/images/portfolio_showcase.gif)
 **Hosted on ???**
 link
 
