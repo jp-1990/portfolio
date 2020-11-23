@@ -7,11 +7,11 @@ import ProjectShowcase from "../components/ProjectShowcase/ProjectShowcase"
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import Contact from "../components/Contact/Contact"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="James Plummer" />
+    <Seo title="James Plummer" />
     <Navbar />
     <Hero />
     <div style={{ backgroundColor: "rgb(0, 123, 145)", height: "150px" }}></div>
