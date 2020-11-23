@@ -44,27 +44,30 @@ const SectionTitle = ({ title, side, color, hover }) => {
   }
 
   // styles
-  const positionStyles = {
-    top: {
-      position: "absolute",
-      top: "6em",
-      color: color,
-    },
-    fixed: {
-      position: "fixed",
-      top: "7.3em",
-      color: color,
-    },
-    bottom: {
-      position: "absolute",
-      top: `${
-        document?.getElementById(title.toLowerCase())?.getBoundingClientRect()
-          .height -
-        window.innerHeight +
-        100
-      }px`,
-      color: color,
-    },
+  let positionStyles
+  if (document) {
+    positionStyles = {
+      top: {
+        position: "absolute",
+        top: "6em",
+        color: color,
+      },
+      fixed: {
+        position: "fixed",
+        top: "7.3em",
+        color: color,
+      },
+      bottom: {
+        position: "absolute",
+        top: `${
+          document?.getElementById(title.toLowerCase())?.getBoundingClientRect()
+            .height -
+          window.innerHeight +
+          100
+        }px`,
+        color: color,
+      },
+    }
   }
 
   // generate title as inidivudal h1 elements
