@@ -17,6 +17,7 @@ const ProjectShowcase = () => {
             hosting
             link
             github
+            icons
             image {
               fluid {
                 src
@@ -47,6 +48,7 @@ const ProjectShowcase = () => {
       description: "",
       github: el.node.github,
       link: el.node.link,
+      icons: el.node.icons,
     })
   })
   queryData.allContentfulProjectDescriptionRichTextNode.edges.forEach(
@@ -69,7 +71,6 @@ const ProjectShowcase = () => {
         hover="secondary"
       />
 
-      {projectsJsx}
       {projectsJsx}
     </Section>
   )
