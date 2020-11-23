@@ -7,7 +7,7 @@ import ProjectShowcase from "../components/ProjectShowcase/ProjectShowcase"
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import Contact from "../components/Contact/Contact"
-import Seo from "../components/Seo"
+import Seo from "../components/Seo/Seo"
 
 const IndexPage = () => (
   <Layout>
