@@ -122,7 +122,11 @@ const Navbar = () => {
       >
         <span>// Back to top </span>
       </div>
-      {widthHeight[0] < 993 ? mobileNavJsx() : standardNavJsx()}
+      {widthHeight
+        ? widthHeight[0] < 993
+          ? mobileNavJsx()
+          : standardNavJsx()
+        : standardNavJsx()}
     </nav>
   )
 }
