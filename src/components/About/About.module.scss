@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  width: 70%;
-  min-width: 300px;
+  width: 80%;
+  min-width: 280px;
   cursor: default;
   font-size: 70%;
-  margin: 1.5em 0;
+  margin: 1.5em 0 1em 0;
   h2 {
     line-height: 1.3em;
     letter-spacing: 1.3px;
@@ -29,9 +29,55 @@
     font-size: 0.9em;
     font-weight: 300;
     line-height: 1.2em;
-    padding: 0 2em;
+    padding: 0 1.5em;
     margin-bottom: 1em;
     letter-spacing: 1.3px;
+  }
+}
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  animation: fadeIn 2s;
+  font-size: 80%;
+  margin-bottom: 1em;
+  a {
+    padding: 0 0.2em;
+  }
+  .cv {
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.2em;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 2em;
+      width: 1.1em;
+      height: 1.5em;
+      margin: 0 0.2em 0.04em 0.4em;
+      text-decoration: none;
+      span {
+        text-shadow: 0px 0px 1px $primary, 0px 0px 1px $primary,
+          0px 0px 1px $primary, 0px 0px 1px $primary, 0px 0px 1px $primary,
+          0px 0px 1px $primary;
+        font-weight: 700;
+        margin-top: 1px;
+        font-size: 0.3em;
+        letter-spacing: 0.2em;
+        padding: 0 0 0 2px;
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    width: 80%;
+    min-width: 360px;
   }
 }
 
@@ -39,26 +85,45 @@
   .container {
     font-size: 80%;
     padding: 1em;
+    padding-bottom: 0;
     margin-left: 30%;
     margin-right: 8%;
-    margin-top: 1.5em;
+    margin-top: 0;
+    width: 70%;
     max-width: 1000px;
+    p {
+      padding: 0 2em;
+    }
+  }
+  .iconBox {
+    margin-right: 8%;
+    margin-left: -12%;
+    margin-bottom: 2em;
+    font-size: 90%;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .container {
     width: 60%;
-    margin-left: 27%;
-    margin-right: 10%;
+    margin-left: 22%;
+    margin-right: 16%;
     font-size: 100%;
-    margin-top: 2em;
+    margin-top: 0.6em;
     max-width: none;
+  }
+  .iconBox {
+    font-size: 100%;
+    margin-left: -20%;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   .container {
     font-size: 120%;
+    margin-top: 2em;
+  }
+  .iconBox {
+    font-size: 130%;
   }
 }
