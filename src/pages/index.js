@@ -11,7 +11,7 @@ import SEO from "../components/Seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="James Plummer" />
     <Navbar />
     <Hero />
     <div style={{ backgroundColor: "rgb(0, 123, 145)", height: "150px" }}></div>
