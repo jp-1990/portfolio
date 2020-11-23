@@ -6,10 +6,12 @@ import styles from "./Navbar.module.scss"
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuState, setMenuState] = useState("closed")
-  const [widthHeight, setWidthHeight] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ])
+  const [widthHeight, setWidthHeight] = useState()
+
+  // set initial width and height
+  useEffect(() => {
+    setWidthHeight([window?.innerWidth, window?.innerHeight])
+  }, [])
 
   // reset width and height on resize
   useEffect(() => {
