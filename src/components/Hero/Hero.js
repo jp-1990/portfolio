@@ -12,8 +12,17 @@ import {
   DiReact,
   DiSass,
 } from "react-icons/di"
-import { SiJavascript, SiLinkedin, SiGatsby, SiFirebase } from "react-icons/si"
-import { BsChevronDoubleDown } from "react-icons/bs"
+import {
+  SiJavascript,
+  SiLinkedin,
+  SiGatsby,
+  SiFirebase,
+  SiGraphql,
+} from "react-icons/si"
+import { IoIosArrowDropdownCircle } from "react-icons/io"
+import { VscFilePdf } from "react-icons/vsc"
+
+import testing from "../../downloads/degree.pdf"
 
 import style from "./Hero.module.scss"
 
@@ -32,7 +41,7 @@ const Hero = () => {
           <h3>Hi, I'm James</h3>
           <h1>WEB DEVELOPER</h1>
           <Button title="PROJECTS" action={scrollHandler}>
-            <BsChevronDoubleDown />
+            <IoIosArrowDropdownCircle />
           </Button>
         </div>
         <div className={style.iconBox}>
@@ -66,6 +75,20 @@ const Hero = () => {
               <SiLinkedin />
             </a>
           </IconContext.Provider>
+          <div className={style.cv}>
+            <a href={testing} target="_blank" rel="noreferrer">
+              <IconContext.Provider
+                value={{
+                  color: "white",
+                  verticalAlign: "middle",
+                  size: "0.8em",
+                }}
+              >
+                <VscFilePdf />
+              </IconContext.Provider>
+              <span>CV</span>
+            </a>
+          </div>
         </div>
         <div className={style.iconHeader}>
           <IconContext.Provider
@@ -115,6 +138,9 @@ const Hero = () => {
           <IconContext.Provider
             value={{ size: "1.2em", color: "white", verticalAlign: "middle" }}
           >
+            <a href="https://graphql.org/" target="_blank" rel="noreferrer">
+              <SiGraphql />
+            </a>
             <a
               href="https://www.gatsbyjs.com/"
               target="_blank"
