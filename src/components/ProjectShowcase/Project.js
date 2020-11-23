@@ -1,25 +1,46 @@
 import React from "react"
 import { IconContext } from "react-icons"
-import { DiGithubBadge, DiHeroku } from "react-icons/di"
-import { SiFirebase } from "react-icons/si"
+import * as Di from "react-icons/di"
+import * as Si from "react-icons/si"
 
 import Button from "../Common/Button"
 import style from "./Projects.module.scss"
 
 const Project = ({ data, side }) => {
   const openInNewTab = url => {
-    console.log("testing")
     const newWindow = window.open(url, "_blank", "noopener,noreferrer")
     if (newWindow) newWindow.opener = null
   }
 
   const icons = {
-    github: <DiGithubBadge />,
-    heroku: <DiHeroku />,
-    firebase: <SiFirebase />,
+    github: <Di.DiGithubBadge />,
+    heroku: <Di.DiHeroku />,
+    firebase: <Si.SiFirebase />,
   }
 
   data.description = data.description.replace("</p>", "</p><br>")
+
+  const iconsArray = data?.icons?.map((el, i) => {
+    const title = el.split("///")[0]
+    const iconPrefix = el.split("///")[1].substring(0, 2)
+    const link = el.split("///")[2]
+    let Icon
+    if (iconPrefix === "Di") Icon = Di[el.split("///")[1]]
+    if (iconPrefix === "Si") Icon = Si[el.split("///")[1]]
+    console.log(Icon)
+    return (
+      <a
+        key={i}
+        className={style.icon}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon />
+        <span>{title}</span>
+      </a>
+    )
+  })
 
   const left = (
     <div className={`${style.projectWrapper} ${style.left}`}>
@@ -29,6 +50,9 @@ const Project = ({ data, side }) => {
           <h3>{data.subtitle}</h3>
           <div className={style.mobileImage}>
             <img src={data.image} alt={data.imageAlt} />
+            <div className={style.logos} style={{ justifyContent: "center" }}>
+              {iconsArray}
+            </div>
           </div>
         </div>
         <div
@@ -48,6 +72,9 @@ const Project = ({ data, side }) => {
       </div>
       <div className={style.projectImage}>
         <img src={data.image} alt={data.imageAlt} />
+        <div className={style.logos} style={{ justifyContent: "flex-start" }}>
+          {iconsArray}
+        </div>
       </div>
     </div>
   )
@@ -56,6 +83,9 @@ const Project = ({ data, side }) => {
     <div className={`${style.projectWrapper} ${style.right}`}>
       <div className={style.projectImage}>
         <img src={data.image} alt={data.imageAlt} />
+        <div className={style.logos} style={{ justifyContent: "flex-end" }}>
+          {iconsArray}
+        </div>
       </div>
       <div className={style.projectText}>
         <div className={style.projectTitles}>
@@ -63,6 +93,9 @@ const Project = ({ data, side }) => {
           <h3>{data.subtitle}</h3>
           <div className={style.mobileImage}>
             <img src={data.image} alt={data.imageAlt} />
+            <div className={style.logos} style={{ justifyContent: "center" }}>
+              {iconsArray}
+            </div>
           </div>
         </div>
         <div
