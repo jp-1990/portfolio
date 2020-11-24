@@ -3,12 +3,12 @@
 A server-side rendered static site, linked to a Contentful CMS via GraphQL, built using Gatsby.
 
 ![Showcase gif](./src/images/portfolio_showcase.gif)
-**Hosted on ???**
-link
+**Hosted on Netlify**  
+https://jamesplummer.netlify.app/
 
 ## Summary
 
-This site is my portfolio, and as such, is designed to showcase my skills and projects in a streamlined and accessible way. In order to make future content updates as easy as possible I chose to use Gatsby with GraphQL, linked to Contentful as my CMS.
+This site is my portfolio, and as such, is designed to showcase my skills and projects in a streamlined and accessible way. In order to make future content updates as easy as possible I chose to use Gatsby with GraphQL, linked to Contentful as my CMS. I have also implemented Netlify Webhooks to trigger a re-deploy when the content on Contentful is edited, to further simplify the content updating process.
 
 ## What I learned
 
