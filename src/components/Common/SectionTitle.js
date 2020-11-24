@@ -4,6 +4,7 @@ import style from "./SectionTitle.module.scss"
 
 const SectionTitle = ({ title, side, color, hover }) => {
   const [sectionY, setSectionY] = useState(0)
+  const [positionStyles, setPositionStyles] = useState()
   let position
 
   // detect position of parent section on scroll
@@ -21,6 +22,32 @@ const SectionTitle = ({ title, side, color, hover }) => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [sectionY, title])
+
+  useEffect(() => {
+    // styles
+    setPositionStyles({
+      top: {
+        position: "absolute",
+        top: "6em",
+        color: color,
+      },
+      fixed: {
+        position: "fixed",
+        top: "7.3em",
+        color: color,
+      },
+      bottom: {
+        position: "absolute",
+        top: `${
+          document?.getElementById(title.toLowerCase())?.getBoundingClientRect()
+            .height -
+          window.innerHeight +
+          100
+        }px`,
+        color: color,
+      },
+    })
+  }, [color, title])
 
   // select style based on window location relative to section
   if (sectionY >= 0) {
@@ -43,33 +70,6 @@ const SectionTitle = ({ title, side, color, hover }) => {
     position = "bottom"
   }
 
-  // styles
-  let positionStyles
-  if (document) {
-    positionStyles = {
-      top: {
-        position: "absolute",
-        top: "6em",
-        color: color,
-      },
-      fixed: {
-        position: "fixed",
-        top: "7.3em",
-        color: color,
-      },
-      bottom: {
-        position: "absolute",
-        top: `${
-          document?.getElementById(title.toLowerCase())?.getBoundingClientRect()
-            .height -
-          window.innerHeight +
-          100
-        }px`,
-        color: color,
-      },
-    }
-  }
-
   // generate title as inidivudal h1 elements
   let output
   if (title) {
@@ -88,7 +88,9 @@ const SectionTitle = ({ title, side, color, hover }) => {
         id={title.toUpperCase()}
         className={style[side]}
         style={
-          title === "PROJECTS" ? positionStyles[position] : { color: color }
+          title === "PROJECTS" && positionStyles
+            ? positionStyles[position]
+            : { color: color }
         }
       >
         {output}
