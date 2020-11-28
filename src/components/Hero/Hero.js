@@ -22,7 +22,7 @@ import {
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 import { VscFilePdf } from "react-icons/vsc"
 
-import testing from "../../downloads/degree.pdf"
+import cv from "../../downloads/webDev_CV.pdf"
 
 import style from "./Hero.module.scss"
 
@@ -76,7 +76,7 @@ const Hero = () => {
             </a>
           </IconContext.Provider>
           <div className={style.cv}>
-            <a href={testing} target="_blank" rel="noreferrer">
+            <a href={cv} target="_blank" rel="noreferrer">
               <IconContext.Provider
                 value={{
                   color: "white",
