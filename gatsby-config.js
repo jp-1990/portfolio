@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== "production") {
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    description: `Web development porfolio for J.Plummer`,
+    description: `Web development portfolio for James Plummer`,
     author: `J.Plummer`,
   },
   plugins: [
