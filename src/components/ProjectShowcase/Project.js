@@ -16,7 +16,7 @@ const Project = ({ data, side }) => {
     github: <Di.DiGithubBadge />,
     heroku: <Di.DiHeroku />,
     firebase: <Si.SiFirebase />,
-    netlify: <SiNetlify />,
+    netlify: <Si.Netlify />,
   }
 
   data.description = data.description.replace("</p>", "</p><br>")
