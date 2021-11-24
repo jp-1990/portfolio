@@ -28,7 +28,7 @@ const Project = ({ data, side }) => {
     let Icon
     if (iconPrefix === "Di") Icon = Di[el.split("///")[1]]
     if (iconPrefix === "Si") Icon = Si[el.split("///")[1]]
-    console.log(Icon)
+
     return (
       <a
         key={i}
