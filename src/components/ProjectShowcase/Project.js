@@ -50,7 +50,8 @@ const Project = ({ data, side }) => {
           <h2>{data.title}</h2>
           <h3>{data.subtitle}</h3>
           <div className={style.mobileImage}>
-            <img src={data.image} alt={data.imageAlt} />
+            {data.image && <img src={data.image} alt={data.imageAlt} />}
+            {data.mp4 && <video autoPlay muted loop src={data.mp4} />}
             <div className={style.logos} style={{ justifyContent: "center" }}>
               {iconsArray}
             </div>
@@ -72,7 +73,8 @@ const Project = ({ data, side }) => {
         </div>
       </div>
       <div className={style.projectImage}>
-        <img src={data.image} alt={data.imageAlt} />
+        {data.image && <img src={data.image} alt={data.imageAlt} />}
+        {data.mp4 && <video autoPlay muted loop src={data.mp4} />}
         <div className={style.logos} style={{ justifyContent: "flex-start" }}>
           {iconsArray}
         </div>
@@ -83,7 +85,8 @@ const Project = ({ data, side }) => {
   const right = (
     <div className={`${style.projectWrapper} ${style.right}`}>
       <div className={style.projectImage}>
-        <img src={data.image} alt={data.imageAlt} />
+        {data.image && <img src={data.image} alt={data.imageAlt} />}
+        {data.mp4 && <video autoPlay muted loop src={data.mp4} />}
         <div className={style.logos} style={{ justifyContent: "flex-end" }}>
           {iconsArray}
         </div>
@@ -93,7 +96,8 @@ const Project = ({ data, side }) => {
           <h2>{data.title}</h2>
           <h3>{data.subtitle}</h3>
           <div className={style.mobileImage}>
-            <img src={data.image} alt={data.imageAlt} />
+            {data.image && <img src={data.image} alt={data.imageAlt} />}
+            {data.mp4 && <video autoPlay muted loop src={data.mp4} />}
             <div className={style.logos} style={{ justifyContent: "center" }}>
               {iconsArray}
             </div>

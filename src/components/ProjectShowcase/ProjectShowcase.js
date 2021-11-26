@@ -23,6 +23,11 @@ const ProjectShowcase = () => {
                 src
               }
             }
+            mp4 {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -43,7 +48,8 @@ const ProjectShowcase = () => {
       title: el.node.title,
       subtitle: el.node.subtitle,
       hosting: el.node.hosting,
-      image: el.node.image.fluid.src,
+      image: el.node.image?.fluid?.src,
+      mp4: el.node.mp4?.file?.url,
       imageAlt: el.node.title,
       description: "",
       github: el.node.github,
