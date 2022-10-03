@@ -1,8 +1,6 @@
-const dotenv = require("dotenv")
-
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config()
-}
+require("dotenv").config({
+  path: `.env`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -46,6 +44,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
+        implementation: require("sass"),
         data: `@import "./src/styles/config";`,
       },
     },
