@@ -7,17 +7,19 @@ import {
   DiCss3,
   DiGit,
   DiHtml5,
-  DiMongodb,
   DiNodejsSmall,
   DiReact,
-  DiSass,
 } from "react-icons/di"
 import {
-  SiJavascript,
+  SiAmazonaws,
+  SiDocker,
   SiLinkedin,
-  SiGatsby,
   SiFirebase,
+  SiKubernetes,
   SiGraphql,
+  SiRedux,
+  SiTypescript,
+  SiTestinglibrary,
 } from "react-icons/si"
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 import { VscFilePdf } from "react-icons/vsc"
@@ -95,15 +97,15 @@ const Hero = () => {
             value={{ size: "1.2em", color: "white", verticalAlign: "middle" }}
           >
             <a
-              href="https://www.javascript.com/"
+              href="https://www.typescriptlang.org/"
               target="_blank"
               rel="noreferrer"
             >
-              <SiJavascript />
+              <SiTypescript />
             </a>
           </IconContext.Provider>
           <IconContext.Provider
-            value={{ size: "1.4em", color: "white", verticalAlign: "middle" }}
+            value={{ size: "1.45em", color: "white", verticalAlign: "middle" }}
           >
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
@@ -119,17 +121,11 @@ const Hero = () => {
             >
               <DiCss3 />
             </a>
-            <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
-              <DiSass />
+            <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
+              <DiNodejsSmall />
             </a>
             <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
               <DiGit />
-            </a>
-            <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-              <DiMongodb />
-            </a>
-            <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
-              <DiNodejsSmall />
             </a>
             <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
               <DiReact />
@@ -138,15 +134,22 @@ const Hero = () => {
           <IconContext.Provider
             value={{ size: "1.2em", color: "white", verticalAlign: "middle" }}
           >
-            <a href="https://graphql.org/" target="_blank" rel="noreferrer">
-              <SiGraphql />
-            </a>
             <a
-              href="https://www.gatsbyjs.com/"
+              href="https://redux-toolkit.js.org/"
               target="_blank"
               rel="noreferrer"
             >
-              <SiGatsby />
+              <SiRedux />
+            </a>
+            <a
+              href="https://testing-library.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiTestinglibrary />
+            </a>
+            <a href="https://graphql.org/" target="_blank" rel="noreferrer">
+              <SiGraphql />
             </a>
             <a
               href="https://firebase.google.com/"
@@ -154,6 +157,19 @@ const Hero = () => {
               rel="noreferrer"
             >
               <SiFirebase />
+            </a>
+            <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+              <SiDocker />
+            </a>
+            <a href="https://kubernetes.io/" target="_blank" rel="noreferrer">
+              <SiKubernetes />
+            </a>
+          </IconContext.Provider>
+          <IconContext.Provider
+            value={{ size: "1.4em", color: "white", verticalAlign: "middle" }}
+          >
+            <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">
+              <SiAmazonaws />
             </a>
           </IconContext.Provider>
         </div>
