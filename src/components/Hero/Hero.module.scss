@@ -45,10 +45,16 @@
       outline-offset: -22px;
       animation: heroShape 1.4s ease;
     }
+
     .background {
       transform: scale(1.01);
       height: 100vh;
       background: black;
+    }
+
+    .backgroundImage {
+      animation: h1Fade ease 1.8s;
+      height: 100vh;
       background-image: url("../../images/homebackground.jpg");
       filter: grayscale(100%) blur(1.5px);
     }
@@ -331,13 +337,6 @@
         outline: 15px solid rgb(34, 34, 34);
         outline-offset: -22px;
         animation: heroShape 1.4s ease;
-      }
-      .background {
-        transform: scale(1.01);
-        height: 100vh;
-        background: black;
-        background-image: url("../../images/homebackground.jpg");
-        filter: grayscale(100%) blur(1.5px);
       }
 
       .iconBox {

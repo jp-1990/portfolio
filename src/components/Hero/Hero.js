@@ -174,7 +174,9 @@ const Hero = () => {
           </IconContext.Provider>
         </div>
         <div className={style.shape}></div>
-        <div className={style.background}></div>
+        <div className={style.background}>
+          <div className={style.backgroundImage} />
+        </div>
       </div>
     </div>
   )
