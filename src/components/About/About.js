@@ -5,8 +5,6 @@ import { DiGithubBadge } from "react-icons/di"
 import { SiLinkedin } from "react-icons/si"
 import { IconContext } from "react-icons"
 
-import cv from "../../downloads/webDev_CV.pdf"
-
 import Section from "../Common/Section"
 import SectionTitle from "../Common/SectionTitle"
 import Wedge from "../Common/Wedge"
@@ -78,7 +76,13 @@ const About = () => {
           </a>
         </IconContext.Provider>
         <div className={style.cv}>
-          <a href={cv} target="_blank" rel="noreferrer">
+          <a
+            href={
+              "https://docs.google.com/document/d/1ui6eyrfN2xxOBsennyK56cD0LgTYawgx2iB-EnRiuYw/view?usp=sharing"
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconContext.Provider
               value={{
                 color: "rgb(0, 123, 145)",

@@ -24,8 +24,6 @@ import {
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 import { VscFilePdf } from "react-icons/vsc"
 
-import cv from "../../downloads/webDev_CV.pdf"
-
 import style from "./Hero.module.scss"
 
 const Hero = () => {
@@ -78,7 +76,13 @@ const Hero = () => {
             </a>
           </IconContext.Provider>
           <div className={style.cv}>
-            <a href={cv} target="_blank" rel="noreferrer">
+            <a
+              href={
+                "https://docs.google.com/document/d/1ui6eyrfN2xxOBsennyK56cD0LgTYawgx2iB-EnRiuYw/view?usp=sharing"
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
               <IconContext.Provider
                 value={{
                   color: "white",
