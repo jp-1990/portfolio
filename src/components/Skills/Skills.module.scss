@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 100%;
   font-size: 0.8em;
+  padding-bottom: 12px;
   .content {
     display: flex;
     flex-direction: column;
@@ -33,12 +34,11 @@
       }
     }
     p {
-      font-size: 0.8em;
+      font-size: 0.9em;
       font-weight: 300;
       line-height: 1.2em;
       padding: 0 1em 0 1em;
       margin-bottom: 1em;
-      letter-spacing: 1.3px;
       color: $text;
     }
   }
